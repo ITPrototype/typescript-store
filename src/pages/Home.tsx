@@ -13,7 +13,7 @@ export default function Home() {
           <h2>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</h2>
           <div className="buttons">
             <a href="/store" className="btn-get-started scrollto"><span>Get Started</span><i className="fa-solid fa-play"></i></a>
-            <a href="" className="glightbox btn-watch-video"><span>Github</span> <i className="fa-brands fa-github"></i></a>
+            <a href="https://github.com/ITPrototype" className="glightbox btn-watch-video"><span>Github</span> <i className="fa-brands fa-github"></i></a>
           </div>
         </div>
       </div>
