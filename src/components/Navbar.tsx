@@ -1,7 +1,6 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import {Button, Container, Nav, Navbar as NavbarBS} from 'react-bootstrap'
 import { NavLink } from 'react-router-dom'
-import CartNum from '../utils/CartNum'
 import CenModal from '../utils/CenModal'
 
 export default function Navbar() {
@@ -27,7 +26,7 @@ export default function Navbar() {
                 className='rounded-circle'
                 style={{position:"relative",width:"3rem",height:"3rem"}}
             >
-                <CartNum num = {num}/>
+                <i className="fa-solid fa-cart-arrow-down"></i>
             </Button>
             <CenModal
                 show={modalShow}

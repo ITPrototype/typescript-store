@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react'
 import { Col, Container, Row } from 'react-bootstrap'
 import StoreItems from '../components/StoreItems'
 import Loader from '../utils/Loader'
+import '../styles/storefix.css'
+
 export const loc:any[]=[]
 export default function Store() {
   const[data,setData]=useState<any[]>([])
@@ -14,14 +16,13 @@ export default function Store() {
     )
     const item = await response.json()
     setData(item)
-    console.log(item);
     setLoader(false)
   }
   useEffect(()=>{
     getStore()
   },[])
   return (
-    <Container>
+    <Container className='homecont'>
       <h1>Store</h1>
       {loader ? <Loader/> : <Row md={2} xs={1} lg={3} className="g-3">
         {data.map(items=>(

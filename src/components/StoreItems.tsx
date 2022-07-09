@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import { Button, Card, Modal } from 'react-bootstrap'
 import { loc } from '../pages/Store'
 import InnerImageZoom from 'react-inner-image-zoom'
@@ -21,9 +21,8 @@ export default function StoreItems({ id, title, description, image, price, categ
     const handleShow = () => setShow(true)
     const handleClose = () => setShow(false)
 
-    const addToCart = () => {
-        loc.indexOf(title) === -1 ? loc.push({ title: title, price: price, image: image, id: id }) &&
-            localStorage.setItem('cart', JSON.stringify(loc)) : alert(`You already added ${title}`)
+    const addToCart = (title:string) => {
+        loc.indexOf(title) === -1 ? loc.push({ title: title, price: price, image: image, id: id }) && localStorage.setItem('cart', JSON.stringify(loc))  :  alert(`You already added ${title}`)
     }
 
     return (
@@ -55,7 +54,7 @@ export default function StoreItems({ id, title, description, image, price, categ
                 </Modal.Body>
                 <Modal.Footer>
                     <Button variant='secondary' onClick={handleClose}>Close</Button>
-                    <Button variant='primary' onClick={addToCart}>Add to cart</Button>
+                    <Button variant='primary' onClick={()=>addToCart(title)}>Add to cart</Button>
                 </Modal.Footer>
             </Modal>
             <Card style={{ height: "610px" }}>
