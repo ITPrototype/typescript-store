@@ -1,10 +1,10 @@
 import Swal from 'sweetalert2'
 import { Button, Card, Modal } from 'react-bootstrap'
 import { loc } from '../pages/Store'
+import { useState } from 'react'
 
 
 export default function CenModal(props: any) {
-
     const showAlert = () => {
         return Swal.fire({
             title: 'Successfully purchased',
@@ -49,7 +49,7 @@ export default function CenModal(props: any) {
                 }
             </Modal.Body>
             <Modal.Footer>
-                <Button>Close</Button>
+                <Button onClick={props.onHide}>Close</Button>
             </Modal.Footer>
         </Modal>
     )

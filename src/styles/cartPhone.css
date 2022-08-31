@@ -7,7 +7,22 @@
     justify-content: center;
     align-items: center;
 }
-
+.showmore_btn{
+    padding: 10px;
+    background: transparent;
+}
+.showmore_btn:hover{
+    background-color: black;
+    color: white;
+    transition: 0.8s;
+    border-radius: 20px;
+}
+.card_footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
 @media screen and (max-width:992px) {
     #wrapper{
         width: 100%;
