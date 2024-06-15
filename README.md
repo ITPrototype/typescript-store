@@ -1,1 +1,1 @@
-React typescript store
+# Web project for learning ts and react better
